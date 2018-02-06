@@ -1,11 +1,13 @@
 package com.wormhole.plugin.dubbo;
 
+import com.wormhole.core.spi.Aircraft;
+import com.wormhole.core.spi.Wormhole;
+import com.wormhole.core.wrapper.LocalReferenceWrapper;
+import com.wormhole.core.wrapper.LocalServiceWrapper;
 import java.rmi.RemoteException;
 import java.util.List;
-import com.wormhole.config.Aircraft;
 import com.wormhole.config.ApplicationConfig;
 import com.wormhole.config.EndpointConfig;
-import com.wormhole.config.spi.Wormhole;
 
 /**
  * Dubbo版本的虫洞.
@@ -23,11 +25,12 @@ public class DubboWormhole implements Wormhole {
 
     }
 
-    public Object sendMessage(Aircraft aircraft) throws RemoteException {
-        return null;
-    }
-
-    public void serviceRegistry(Object service) {
+    public void serviceRegistry(List<LocalServiceWrapper> services) {
 
     }
+
+    public void referenceRegistry(List<LocalReferenceWrapper> references) {
+
+    }
+
 }

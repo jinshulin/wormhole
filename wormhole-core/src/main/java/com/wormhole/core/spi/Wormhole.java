@@ -1,9 +1,10 @@
-package com.wormhole.config.spi;
+package com.wormhole.core.spi;
 
 import com.wormhole.config.EndpointConfig;
+import com.wormhole.core.wrapper.LocalReferenceWrapper;
+import com.wormhole.core.wrapper.LocalServiceWrapper;
 import java.rmi.RemoteException;
 import java.util.List;
-import com.wormhole.config.Aircraft;
 import com.wormhole.config.ApplicationConfig;
 
 /**
@@ -26,16 +27,14 @@ public interface Wormhole {
     void reference(List<EndpointConfig> configs);
 
     /**
-     * 飞行器装载好物资，穿越虫洞，到达彼岸.
-     * @param aircraft 要准备穿越的飞行器
-     * @return 响应信息
-     * @throws RemoteException 调用失败，抛出异常
+     * 将服务注册到通信通道中.
+     * @param services 实际暴露的服务
      */
-    Object sendMessage(Aircraft aircraft) throws RemoteException;
+    void serviceRegistry(List<LocalServiceWrapper> services);
 
     /**
-     * 将服务注册到通信通道中
-     * @param service 实际暴露的服务
+     * 将本地服务依赖注册到通信通道中.
+     * @param references 本地服务依赖
      */
-    void serviceRegistry(Object service);
+    void referenceRegistry(List<LocalReferenceWrapper> references);
 }

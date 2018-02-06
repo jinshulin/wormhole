@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>io.wormhole</groupId>
-            <artifactId>wormhole-config-base</artifactId>
+            <artifactId>wormhole-core</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

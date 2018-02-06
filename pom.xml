@@ -15,6 +15,8 @@
 	<properties>
 		<spring-framework.version>4.3.8.RELEASE</spring-framework.version>
         <logback.version>1.1.11</logback.version>
+        <common.lang3.version>3.4</common.lang3.version>
+        <guava.version>20.0</guava.version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -29,6 +31,16 @@
                 <version>${spring-framework.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${common.lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
                 <version>${logback.version}</version>
@@ -38,7 +50,6 @@
 
 	<modules>
 		<module>wormhole-config</module>
-		<module>wormhole-remote</module>
 		<module>wormhole-plugins</module>
         <module>wormhole-core</module>
         <module>wormhole-common</module>

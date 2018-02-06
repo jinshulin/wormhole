@@ -1,4 +1,6 @@
-package com.wormhole.config;
+package com.wormhole.core.spi;
+
+import com.wormhole.config.ReferenceConfig;
 
 /**
  * 行器可以携带物资和星图，穿越虫洞，到达彼岸.
