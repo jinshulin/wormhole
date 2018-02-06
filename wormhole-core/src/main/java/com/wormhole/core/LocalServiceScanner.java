@@ -12,7 +12,7 @@ import java.util.List;
  * @author jinshulin (jinshulin@zhengheyingshi.com)
  * @since 2018年02月06日 16时40分
  */
-public class LocalServiceScanner {
+public abstract class LocalServiceScanner {
 
     /**
      * 通过待暴露服务的配置，扫描所有待暴露服务.
